@@ -97,7 +97,8 @@ namespace Ejercicio6
             Panel.DrawRectangle(contorno2, rectangulo[1]);
 
             // Fig 3. Borde redondo y dashed de rectángulo
-            Panel.DrawRectangle(lineas1, rectangulo[2]);
+            DrawRoundedRectangle(Panel, lineas1, col3, fila1, ancho, alto, 25, 25);
+            //Panel.DrawRectangle(lineas1, rectangulo[2]);
 
             // Fig 4. Arco
             float aInicial4 = 135; // Angulo inicial
@@ -132,7 +133,8 @@ namespace Ejercicio6
             // Fig 9. Relleno de rectángulo con borde redondo
             LinearGradientBrush Degradado1 = new LinearGradientBrush(rectangulo[8], Verde, Morado, LinearGradientMode.Horizontal);
             Degradado1.GammaCorrection = true;
-            Panel.FillRectangle(Degradado1, rectangulo[8]);
+            FillRoundedRectangle(Panel, Degradado1, col3, fila2, ancho, alto, 25, 25);
+            //Panel.FillRectangle(Degradado1, rectangulo[8]);
 
             // Fig 10. Pie o arco relleno
             float aInicial10 = 135; // Angulos
@@ -156,6 +158,34 @@ namespace Ejercicio6
             figura12.AddLines(fig12);
             Panel.FillPath(Relleno3, figura12);
             Panel.DrawPath(contorno3, figura12);
+        }
+
+        static void DrawRoundedRectangle(Graphics g, Pen p, int x, int y, int w, int h, int rx, int ry)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(x, y, rx + rx, ry + ry, 180, 90);
+            path.AddLine(x + rx, y, x + w - rx, y);
+            path.AddArc(x + w - 2 * rx, y, 2 * rx, 2 * ry, 270, 90);
+            path.AddLine(x + w, y + ry, x + w, y + h - ry);
+            path.AddArc(x + w - 2 * rx, y + h - 2 * ry, rx + rx, ry + ry, 0, 91);
+            path.AddLine(x + rx, y + h, x + w - rx, y + h);
+            path.AddArc(x, y + h - 2 * ry, 2 * rx, 2 * ry, 90, 91);
+            path.CloseFigure();
+            g.DrawPath(p, path);
+        }
+
+        static void FillRoundedRectangle(Graphics g, Brush b, int x, int y, int w, int h, int rx, int ry)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(x, y, rx + rx, ry + ry, 180, 90);
+            path.AddLine(x + rx, y, x + w - rx, y);
+            path.AddArc(x + w - 2 * rx, y, 2 * rx, 2 * ry, 270, 90);
+            path.AddLine(x + w, y + ry, x + w, y + h - ry);
+            path.AddArc(x + w - 2 * rx, y + h - 2 * ry, rx + rx, ry + ry, 0, 91);
+            path.AddLine(x + rx, y + h, x + w - rx, y + h);
+            path.AddArc(x, y + h - 2 * ry, 2 * rx, 2 * ry, 90, 91);
+            path.CloseFigure();
+            g.FillPath(b, path);
         }
     }
 }
