@@ -2,10 +2,10 @@ C:\Users\jose\source\repos\Ejercicio6\bin\Debug\Ejercicio6.exe.config
 C:\Users\jose\source\repos\Ejercicio6\bin\Debug\Ejercicio6.exe
 C:\Users\jose\source\repos\Ejercicio6\bin\Debug\Ejercicio6.pdb
 C:\Users\jose\source\repos\Ejercicio6\obj\Debug\Ejercicio6.csprojAssemblyReference.cache
-C:\Users\jose\source\repos\Ejercicio6\obj\Debug\Ejercicio6.Form1.resources
 C:\Users\jose\source\repos\Ejercicio6\obj\Debug\Ejercicio6.Parte2.resources
 C:\Users\jose\source\repos\Ejercicio6\obj\Debug\Ejercicio6.Properties.Resources.resources
 C:\Users\jose\source\repos\Ejercicio6\obj\Debug\Ejercicio6.csproj.GenerateResource.cache
 C:\Users\jose\source\repos\Ejercicio6\obj\Debug\Ejercicio6.csproj.CoreCompileInputs.cache
 C:\Users\jose\source\repos\Ejercicio6\obj\Debug\Ejercicio6.exe
 C:\Users\jose\source\repos\Ejercicio6\obj\Debug\Ejercicio6.pdb
+C:\Users\jose\source\repos\Ejercicio6\obj\Debug\Ejercicio6.Parte1.resources

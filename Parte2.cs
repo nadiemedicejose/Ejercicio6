@@ -187,5 +187,12 @@ namespace Ejercicio6
             path.CloseFigure();
             g.FillPath(b, path);
         }
+
+        private void Parte1_Click(object sender, EventArgs e)
+        {
+            Parte1 ir = new Parte1();
+            ir.Show();
+            this.Hide();
+        }
     }
 }
